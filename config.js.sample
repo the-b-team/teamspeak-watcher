@@ -1,0 +1,7 @@
+module.exports = {
+    hostname: 'example.com',
+    port: 10011,
+    sqUser: 'serveradmin',
+    sqPass: 'password123',
+    virtualServerId: '1'
+}
