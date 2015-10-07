@@ -6,12 +6,14 @@ var events = require('events');
 
 var mkUserObjs = require('./mk_user_objs');
 var config = require('./config');
+var slack = require('./slack');
 
 var eventEmitter = new events.EventEmitter();
 
 eventEmitter.on('userChange', function(nickname, status) {
     // do stuff when users change
     console.log(nickname + ' ' + status);
+    slack(nickname, status);
 });
 
 // connect to TeamSpeak ServerQuery and login
